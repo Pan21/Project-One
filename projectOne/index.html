@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="gameSetup" v-if="gameboard">
+        <div class="row">
+            <button class="boxes" v-on:click="markBoard(0,0)">{{ gameboard[0][0] }}</button>
+            <button class="boxes" v-on:click="markBoard(0,1)">{{ gameboard[0][1] }}</button>
+            <button class="boxes" v-on:click="markBoard(0,2)">{{ gameboard[0][2] }}</button>
+        </div>
+        <div class="row">
+            <button class="boxes" v-on:click="markBoard(1,0)">{{ gameboard[1][0] }}</button>
+            <button class="boxes" v-on:click="markBoard(1,1)">{{ gameboard[1][1] }}</button>
+            <button class="boxes" v-on:click="markBoard(1,2)">{{ gameboard[1][2] }}</button>
+        </div>
+        <div class="row">
+            <button class="boxes" v-on:click="markBoard(2,0)">{{ gameboard[2][0] }}</button>
+            <button class="boxes" v-on:click="markBoard(2,1)">{{ gameboard[2][1] }}</button>
+            <button class="boxes" v-on:click="markBoard(2,2)">{{ gameboard[2][2] }}</button>
+        </div>
+        <button class="restart" v-on:click="restart()">Click Here to restart the game!</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>
